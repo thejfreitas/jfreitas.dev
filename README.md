@@ -1,10 +1,3 @@
-# juniorfreitas.net
-My personal website
+# jfreitas.dev
 
-Stack:
-SASS
-Gulp
-Wordpress
-Wordpress API
-Bootstrap 4, PureCss or Bulma?
-Angular or React?
+My personal website
