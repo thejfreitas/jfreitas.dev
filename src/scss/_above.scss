@@ -1,0 +1,76 @@
+.logo {
+    position: relative;
+    font-size: 5rem;
+    letter-spacing: -0.6rem;
+    font-weight: bold;
+    display: inline-flex;
+    line-height: 8rem;
+    z-index: 1;
+    &:link,
+    &:visited {
+        color: $fourth-colour;
+    }
+    &:hover {
+        .jay {
+            &:after {
+                background-color: $fifth-colour;
+            }
+            &:before {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    .jay {
+        @include logo-transition;
+        padding: 0 3.5rem 0 0;
+        letter-spacing: normal;
+        position: relative;
+        margin-right: -2rem;
+        color: white;
+        z-index: 4;
+        &:after {
+            @include logo-transition;
+            content: "";
+            width: 1rem;
+            height: 1rem;
+            background-color: $fourth-colour;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 2.1rem;
+            left: 2.65rem;
+            z-index: 3;
+        }
+        &:before {
+            @include logo-transition;
+            content: "";
+            background-color: $second-colour;
+            position: absolute;
+            width: 5rem;
+            height: 5rem;
+            left: -1rem;
+            bottom: 1.5rem;
+            z-index: -1;
+        }
+    }
+    .freitas {
+        z-index: 4;
+    }
+}
+
+.main-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+        display: inline;
+        a {
+            &:not(:last-child) {
+                margin-right: 2rem !important;
+            }
+            li {
+                display: inline;
+            }
+        }
+    }
+}
