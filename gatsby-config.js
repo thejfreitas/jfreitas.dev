@@ -9,11 +9,23 @@ module.exports = {
     greeting: `Hi! My name is`,
     name: `J. de Freitas`,
     aboutMeIntro: `I am a full-stack web developer`,
-    socialMedia: {
-      twitter: `https://twitter.com/juniormfreitas`,
-      github: `https://github.com/juniormfreitas`,
-      linkedin: `https://www.linkedin.com/in/juniormfreitas/`,
-    }
+    socialMedia: [
+      {
+        name: `Twitter`,
+        url: `https://twitter.com/juniormfreitas`,
+        icon: `twitter.svg`
+      },
+      {
+        name: `Github`,
+        url: `https://github.com/juniormfreitas`,
+        icon: `github.svg`
+      },
+      {
+        name: `LinkedIn`,
+        url: `https://www.linkedin.com/in/juniormfreitas/`,
+        icon: `linkedin.svg`
+      },
+    ]
   },
   plugins: [
     `gatsby-plugin-sass`,

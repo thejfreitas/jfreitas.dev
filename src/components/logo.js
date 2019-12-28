@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
+import Logo from "../img/freitas-logo-min.svg"
 
 export default () => (
     <Link to="/" className="logo">
-        <span className="jay">J</span>
-        <span className="freitas">Freitas</span>
+        <img className="logo" src={Logo} alt="J.Freitas.dev logo" />
     </Link>
 )

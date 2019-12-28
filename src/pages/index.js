@@ -21,7 +21,7 @@ export const query = graphql`
       siteMetadata {
         greeting
         name
-        aboutMeIntro      
+        aboutMeIntro
       }
     }
   }
