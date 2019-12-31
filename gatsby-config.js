@@ -8,22 +8,24 @@ module.exports = {
   siteMetadata: {
     greeting: `Hi! My name is`,
     name: `J. de Freitas`,
-    aboutMeIntro: `I am a full-stack web developer`,
+    author: this.name,
+    title: `Software Developer`,
+    aboutMeIntro: `I am a Full-Stack Developer and Systems Analyst with more than 7 years of experience in delivering systems, projects, APIs and websites.`,
     socialMedia: [
       {
         name: `Twitter`,
         url: `https://twitter.com/juniormfreitas`,
-        icon: `twitter.svg`
+        icoClass: `twitter`
       },
       {
         name: `Github`,
         url: `https://github.com/juniormfreitas`,
-        icon: `github.svg`
+        icoClass: `github`
       },
       {
         name: `LinkedIn`,
         url: `https://www.linkedin.com/in/juniormfreitas/`,
-        icon: `linkedin.svg`
+        icoClass: `linkedin`
       },
     ]
   },
