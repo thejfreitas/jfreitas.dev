@@ -1,8 +1,7 @@
 import React from "react"
-import { graphql } from "gatsby"
 import Layout from "../templates/layout-wrap"
 
-export default ({ data }) => {
+export default () => {
   return (
     <Layout>
       <div className="content pure-u-1 pure-u-md-3-4">
@@ -19,9 +18,9 @@ export default ({ data }) => {
               <h2 className="post-title">Pinned Post</h2>
 
               <p className="post-meta">
-                By <a href="#" className="post-author">J. de Freitas</a> under
-                <a className="post-category post-category-css" href="#">CSS</a>
-                <a className="post-category post-category-html" href="#">HTML</a>
+                By <a href="/" className="post-author">J. de Freitas</a> under
+                <a className="post-category post-category-css" href="/">CSS</a>
+                <a className="post-category post-category-html" href="/">HTML</a>
               </p>
             </header>
 
@@ -40,8 +39,8 @@ export default ({ data }) => {
               <h2 className="post-title">Nullam fermentum rutrum quam</h2>
 
               <p className="post-meta">
-                By <a href="#" className="post-author">J. de Freitas</a> under
-                <a className="post-category post-category-php" href="#">PHP</a>
+                By <a href="/" className="post-author">J. de Freitas</a> under
+                <a className="post-category post-category-php" href="/">PHP</a>
               </p>
             </header>
 
@@ -58,8 +57,8 @@ export default ({ data }) => {
               <h2 className="post-title">Nullam fermentum rutrum quam</h2>
 
               <p className="post-meta">
-                By <a href="#" className="post-author">J. de Freitas</a> under
-                <a className="post-category post-category-php" href="#">PHP</a>
+                By <a href="/" className="post-author">J. de Freitas</a> under
+                <a className="post-category post-category-php" href="/">PHP</a>
               </p>
             </header>
 
@@ -76,8 +75,8 @@ export default ({ data }) => {
               <h2 className="post-title">Nullam fermentum rutrum quam</h2>
 
               <p className="post-meta">
-                By <a href="#" className="post-author">J. de Freitas</a> under
-                <a className="post-category post-category-php" href="#">PHP</a>
+                By <a href="/" className="post-author">J. de Freitas</a> under
+                <a className="post-category post-category-php" href="/">PHP</a>
               </p>
             </header>
 
@@ -94,8 +93,8 @@ export default ({ data }) => {
               <h2 className="post-title">Nullam fermentum rutrum quam</h2>
 
               <p className="post-meta">
-                By <a href="#" className="post-author">J. de Freitas</a> under
-                <a className="post-category post-category-php" href="#">PHP</a>
+                By <a href="/" className="post-author">J. de Freitas</a> under
+                <a className="post-category post-category-php" href="/">PHP</a>
               </p>
             </header>
 
@@ -121,15 +120,3 @@ export default ({ data }) => {
     </Layout>
   )
 }
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        greeting
-        name
-        aboutMeIntro
-      }
-    }
-  }
-`
