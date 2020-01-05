@@ -39,7 +39,7 @@ a {
 .header {
     text-align: center;
     top: auto;
-    margin: 3rem auto;
+    margin: 3rem 1.5rem;
 
     .main-title,
     .main-tagline {
@@ -55,7 +55,10 @@ a {
 
 .sidebar {
     background: rgb(61, 79, 93);
-    color: #fff;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .brand-tagline {
@@ -194,7 +197,6 @@ a {
     }
 
     .header {
-        margin: 80% 2rem 0;
         text-align: right;
     }
 

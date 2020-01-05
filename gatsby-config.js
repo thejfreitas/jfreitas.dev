@@ -13,9 +13,9 @@ module.exports = {
     aboutMeIntro: `I am a Full-Stack Developer and Systems Analyst with more than 7 years of experience in delivering systems, projects, APIs and websites.`,
     socialMedia: [
       {
-        name: `Twitter`,
-        url: `https://twitter.com/juniormfreitas`,
-        icoClass: `twitter`
+        name: `LinkedIn`,
+        url: `https://www.linkedin.com/in/juniormfreitas/`,
+        icoClass: `linkedin`
       },
       {
         name: `Github`,
@@ -23,9 +23,9 @@ module.exports = {
         icoClass: `github`
       },
       {
-        name: `LinkedIn`,
-        url: `https://www.linkedin.com/in/juniormfreitas/`,
-        icoClass: `linkedin`
+        name: `Twitter`,
+        url: `https://twitter.com/juniormfreitas`,
+        icoClass: `twitter`
       },
     ]
   },
