@@ -11,12 +11,8 @@ $text-colour: rgba(97, 97, 97, 1);
 $black: #000000;
 $white: #ffffff;
 
-$main-colour: rgb(26, 105, 184);
-$second-colour: rgb(86, 141, 195);
-$third-colour: rgb(25, 40, 56);
-$fourth-colour: rgb(19, 76, 133);
-$fifth-colour: rgb(8, 32, 56);
-
+$css3: #1572b6;
+$html: #e34f26;
 $php: #777bb4;
 $javascript: #f7df1e;
 $gatsby: #663399;
@@ -24,7 +20,8 @@ $laravel: #ff2d20;
 $react: #61dafb;
 $go: #00add8;
 $hubspot: #ff7a59;
-$css3: #1572b6;
-$html: #e34f26;
 $docker: #1488c6;
 $shopify: #7ab55c;
+
+$main-colour: $html;
+$second-colour: $css3;

@@ -1,23 +1,47 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../templates/layout-wrap"
 
 export default () => {
+
+  const pageData = useStaticQuery(
+    graphql`
+    query Index {
+        site {
+            siteMetadata {
+                name {
+                  first
+                  middle
+                  last
+                }
+                greetings
+                title
+                aboutMeIntro
+                socialMedia {
+                    name
+                    url
+                }
+            }
+        }    
+    }`
+  )
+
   return (
     <Layout>
-      <div className="content pure-u-1 pure-u-md-3-4">
-
-
-
-        <div className="footer">
-          <div className="pure-menu pure-menu-horizontal">
-            <ul>
-              <li className="pure-menu-item"><a href="http://purecss.io/" className="pure-menu-link">About</a></li>
-              <li className="pure-menu-item"><a href="http://twitter.com/yuilibrary/" className="pure-menu-link">Twitter</a></li>
-              <li className="pure-menu-item"><a href="http://github.com/pure-css/pure/" className="pure-menu-link">GitHub</a></li>
-            </ul>
+      <section className="container">
+        <div className="pure-u-1 pure-u-md-3-5">
+          <div className="central-wrap">
+            <p className="greeting-area">
+              <span className="greeting">{pageData.site.siteMetadata.greetings[0]}</span><span className="intro">, my name is</span>
+            </p>
+            <h1 className="name-area">{pageData.site.siteMetadata.name[0].first} {pageData.site.siteMetadata.name[0].last}</h1>
+            <p className="about-area">{pageData.site.siteMetadata.aboutMeIntro}</p>
           </div>
         </div>
-      </div>
+        <div className="pure-u-1 pure-u-md-2-5">
+          <p>Picture goes here</p>
+        </div>
+      </section>
     </Layout>
   )
 }

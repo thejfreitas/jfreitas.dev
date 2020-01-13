@@ -1,23 +1,24 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import "../scss/main.scss"
-import { graphql, useStaticQuery } from "gatsby"
-import MainNavigation from "./main-navigation"
-import SocialNavigation from "./social-navigation"
+import { Link, graphql, useStaticQuery } from "gatsby"
+import MainNavigation from "../components/main-navigation"
 
 export default () => {
-    const pageData = useStaticQuery(
+
+    const headerData = useStaticQuery(
         graphql`
-        query Header {
+        query MainHeader {
             site {
                 siteMetadata {
-                    greeting
-                    name
-                    title
-                    aboutMeIntro
+                    name {
+                        middle
+                        last
+                    }
                     socialMedia {
                         name
                         url
+                        icoClass
                     }
                 }
             }    
@@ -25,21 +26,20 @@ export default () => {
     )
 
     return (
-        <div className="pure-g">
+        <div className="container pure-g main-header">
+
             <Helmet>
                 <html lang="en" />
                 <meta charSet="utf-8" />
             </Helmet>
-            <div className="sidebar pure-u-1 pure-u-md-1-4">
-                <div className="header">
-                    <h1 className="main-title">{pageData.site.siteMetadata.name}</h1>
-                    <h2 className="main-tagline">{pageData.site.siteMetadata.title}</h2>
-                    <p>{pageData.site.siteMetadata.aboutMeIntro}</p>
 
-                    <MainNavigation />
-                    <SocialNavigation socialMedia={pageData.site.siteMetadata.socialMedia} />
-                </div>
+            <div className="pure-u-1-2">
+                <Link to="/" className="main-headline">{headerData.site.siteMetadata.name[0].last}</Link>
             </div>
+            <div className="pure-u-1-2 header-navigation-area">
+                <MainNavigation socialMedia={headerData.site.siteMetadata.socialMedia} />
+            </div>
+
         </div>
     )
 }

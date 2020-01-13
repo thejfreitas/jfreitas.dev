@@ -7,7 +7,7 @@ export default ({ socialMedia }) => {
                 {socialMedia.map((item, i) => {
                     return (
                         <li key={i} className="nav-item">
-                            <a className="pure-button" href={item.url}>{item.name}</a>
+                            <a target="_blank" rel="noopener noreferrer" className="pure-button" href={item.url}>{item.name}</a>
                         </li>
                     )
                 })}

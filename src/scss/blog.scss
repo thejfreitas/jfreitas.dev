@@ -1,0 +1,107 @@
+.header {
+    text-align: center;
+    top: auto;
+    margin: 3rem 1.5rem;
+
+    .main-title,
+    .main-tagline {
+        margin: 0;
+    }
+    .main-title {
+        color: $white;
+    }
+    .main-tagline {
+        color: darken($white, 20%);
+    }
+}
+
+.sidebar {
+    background: rgb(61, 79, 93);
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-subhead {
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+    padding: 0.4rem 0;
+    font-size: 80%;
+    letter-spacing: 0.1rem;
+}
+
+.content {
+    padding: 2rem 1rem 0;
+}
+
+.post {
+    padding-bottom: 2rem;
+}
+
+.post-title {
+    margin-bottom: 0.2rem;
+}
+
+.post-description {
+    color: #444;
+}
+
+.post-meta {
+    color: #999;
+    font-size: 90%;
+    margin: 0;
+}
+
+.post-category {
+    margin: 0 0.1rem;
+    padding: 0.3em 1rem;
+    color: $white;
+    font-size: 80%;
+    text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.8);
+
+    &:hover {
+        color: darken($white, 20%);
+    }
+
+    &-php {
+        background-color: $php;
+    }
+    &-javascript {
+        background-color: $javascript;
+    }
+    &-gatsby {
+        background-color: $gatsby;
+    }
+    &-laravel {
+        background-color: $laravel;
+    }
+    &-react {
+        background-color: $react;
+    }
+    &-go {
+        background-color: $go;
+    }
+    &-hubspot {
+        background-color: $hubspot;
+    }
+    &-css {
+        background-color: $css3;
+    }
+    &-html {
+        background-color: $html;
+    }
+    &-docker {
+        background-color: $docker;
+    }
+}
+
+.post-images {
+    margin: 1rem 0;
+}
+.post-image-meta {
+    margin-top: -3.5rem;
+    margin-left: 1rem;
+    color: $white;
+    text-shadow: 0 1px 1px #333;
+}
