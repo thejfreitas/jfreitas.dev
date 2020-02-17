@@ -26,20 +26,20 @@ export default () => {
     )
 
     return (
-        <div className="container pure-g main-header">
+        <React.Fragment>
+            <div className="container pure-g main-header">
+                <Helmet>
+                    <html lang="en" />
+                    <meta charSet="utf-8" />
+                </Helmet>
 
-            <Helmet>
-                <html lang="en" />
-                <meta charSet="utf-8" />
-            </Helmet>
-
-            <div className="pure-u-1-2">
-                <Link to="/" className="main-headline">{headerData.site.siteMetadata.name[0].last}</Link>
+                <div className="pure-u-1-2">
+                    <Link to="/" className="main-headline">{headerData.site.siteMetadata.name[0].last}</Link>
+                </div>
+                <div className="pure-u-1-2 header-navigation-area">
+                    <MainNavigation socialMedia={headerData.site.siteMetadata.socialMedia} />
+                </div>
             </div>
-            <div className="pure-u-1-2 header-navigation-area">
-                <MainNavigation socialMedia={headerData.site.siteMetadata.socialMedia} />
-            </div>
-
-        </div>
+        </React.Fragment>
     )
 }

@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    line-height: 1;
 }
 
 html {
@@ -19,6 +20,7 @@ h4,
 h5,
 h6 {
     color: $header-colour;
+    margin: 0;
 }
 
 a {
@@ -41,150 +43,5 @@ a {
 
     @media (min-width: 1200px) {
         max-width: 1140px;
-    }
-}
-
-.main-header {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-
-.header-navigation-area {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    .pure-button {
-        background: transparent;
-        font-size: 1.8rem;
-    }
-}
-
-.main-headline {
-    font-size: 5rem;
-    letter-spacing: -0.5rem;
-    font-weight: bold;
-    span {
-        font-weight: initial;
-        font-size: 3rem;
-        letter-spacing: -0.3rem;
-        color: $text-colour;
-    }
-}
-
-.pure-img-responsive {
-    max-width: 100%;
-    height: auto;
-}
-
-section {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-    @media (max-width: $breakpoint-md) {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-    }
-}
-
-.central-wrap {
-    p {
-        display: block;
-        margin: 0;
-    }
-    .greeting-area {
-        .greeting {
-            font-size: 10rem;
-        }
-        .intro {
-            font-size: 5rem;
-        }
-    }
-    .name-area {
-        font-size: 12rem;
-        line-height: 12rem;
-        letter-spacing: -0.5rem;
-        margin: 0;
-        color: $main-colour;
-        font-weight: bold;
-
-        small {
-            font-weight: initial;
-            font-size: 6rem;
-            color: $text-colour;
-        }
-    }
-    .about-area {
-        font-size: 3rem;
-        width: 70%;
-    }
-}
-
-.nav-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.nav-item {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-
-    &:not(:first-child) {
-        margin-left: 1rem;
-    }
-
-    a {
-        &.ico {
-            mask-repeat: no-repeat;
-            mask-position: center;
-            width: 5rem;
-            height: 2.5rem;
-            background-color: $text-colour;
-            &.twitter {
-                mask-image: url("../img/twitter.svg");
-            }
-            &.github {
-                mask-image: url("../img/github.svg");
-            }
-            &.linkedin {
-                mask-image: url("../img/linkedin.svg");
-            }
-            span {
-                opacity: 0;
-            }
-        }
-    }
-}
-
-.footer {
-    padding: 1rem 0;
-    a {
-        color: #ccc;
-        font-size: 80%;
-    }
-    .pure-menu a:hover,
-    .pure-menu a:focus {
-        background: none;
-    }
-}
-
-@media (min-width: $breakpoint-md) {
-    .content {
-        padding: 2rem 3rem 0;
-        margin-left: 25%;
-    }
-
-    .header {
-        text-align: right;
-    }
-
-    .sidebar {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-    }
-
-    .footer {
-        text-align: center;
     }
 }

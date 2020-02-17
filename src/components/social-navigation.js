@@ -2,7 +2,7 @@ import React from "react"
 
 export default ({ socialMedia }) => {
     return (
-        <nav className="nav" >
+        <nav className="nav">
             <ul className="nav-list">
                 {socialMedia.map((item, i) => {
                     return (

@@ -38,9 +38,7 @@ export default () => {
             <p className="about-area">{pageData.site.siteMetadata.aboutMeIntro}</p>
           </div>
         </div>
-        <div className="pure-u-1 pure-u-md-2-5">
-          <p>Picture goes here</p>
-        </div>
+        <div className="pure-u-1 pure-u-md-2-5"></div>
       </section>
     </Layout>
   )

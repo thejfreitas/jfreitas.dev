@@ -20,7 +20,7 @@ module.exports = {
       }
     ],
     title: `Software Developer`,
-    aboutMeIntro: `I am a Full-Stack Web Developer with experience in delivering systems, APIs and websites.`,
+    aboutMeIntro: `I am a Full-Stack Web Developer with passion in build things with code.`,
     socialMedia: [
       {
         name: `LinkedIn`,
