@@ -17,10 +17,6 @@ export default () => {
                 }
                 greetings
                 aboutMeIntro
-                socialMedia {
-                    name
-                    url
-                }
             }
         }    
     }`
@@ -41,6 +37,9 @@ export default () => {
 
           <div className="pure-u-1 pure-u-md-2-3">
             <p className="about-area">{pageData.site.siteMetadata.aboutMeIntro}</p>
+            <p>Graduated in systems analysis, I am aficionado in helping business and individuals elevate their brands and reach the next level.</p>
+            <p>I love to spend my free time learning more about new technologies in order to aplly on my next projects as well exploring <a target="_blank" rel="noopener noreferrer" href="https://jfreitas.photos">Canada with my camera</a></p>
+            <p></p>
           </div>
 
         </div>

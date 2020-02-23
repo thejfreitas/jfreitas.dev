@@ -25,13 +25,13 @@ h6 {
 }
 
 a {
-    @include default-transition;
     text-decoration: none;
-    color: $main-colour;
+    color: $text-colour;
     position: relative;
     &:hover,
     &:focus {
         color: $main-colour;
+        text-decoration: underline;
     }
 }
 
@@ -43,7 +43,7 @@ a {
     margin-left: auto;
 
     @media (min-width: 1200px) {
-        max-width: calc(1140px - 300px);
+        max-width: calc(1140px - 100px);
     }
 }
 
@@ -70,7 +70,37 @@ nav {
         li {
             display: inline;
             &:not(:last-child) {
-                margin-right: 2rem;
+                margin-right: 4rem;
+            }
+            a {
+                font-style: italic;
+                font-weight: bold;
+                &.ico {
+                    &::before {
+                        content: "";
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        width: 2rem;
+                        height: 2rem;
+                        top: -0.2rem;
+                        left: -2.5rem;
+                    }
+                    &.linkedin {
+                        &::before {
+                            background-image: url(../img/linkedin.svg);
+                        }
+                    }
+                    &.github {
+                        &::before {
+                            background-image: url(../img/github.svg);
+                        }
+                    }
+                    &.twitter {
+                        &::before {
+                            background-image: url(../img/twitter.svg);
+                        }
+                    }
+                }
             }
         }
     }
