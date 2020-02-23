@@ -1,12 +1,12 @@
 import React from "react"
 
 export default ({ socialMedia }) => (
-    <nav className="nav">
+    <nav className="nav pure-u-1">
         <ul className="nav-list">
             {socialMedia.map((item, i) => {
                 return (
                     <li key={i} className="nav-item">
-                        <a href={item.url} title aria-label={item.name} target="_blank" rel="noopener noreferrer" className={item.icoClass + ` pure-button ico`}><span>{item.name}</span></a>
+                        <a href={item.url} aria-label={item.name} target="_blank" rel="noopener noreferrer" className={item.icoClass + ` ico`}><span>{item.name}</span></a>
                     </li>
                 )
             })}

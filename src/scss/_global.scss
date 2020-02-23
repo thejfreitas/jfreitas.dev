@@ -11,6 +11,7 @@ body {
     font-family: "Poppins", sans-serif;
     font-size: 1.6rem;
     color: $text-colour;
+    background-color: $bg-colour;
 }
 
 h1,
@@ -42,6 +43,68 @@ a {
     margin-left: auto;
 
     @media (min-width: 1200px) {
-        max-width: 1140px;
+        max-width: calc(1140px - 300px);
+    }
+}
+
+.hero-intro {
+    height: 50rem;
+    display: flex;
+    align-items: center;
+}
+
+.greeting-area {
+    .greeting {
+    }
+}
+
+.name {
+    font-size: 8rem;
+    font-style: italic;
+}
+
+nav {
+    text-align: right;
+    .nav-list {
+        padding-left: 0;
+        li {
+            display: inline;
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+    }
+}
+
+figure {
+    object-fit: fill;
+    margin: 0;
+    position: relative;
+    .headshot {
+        border: 0.5rem solid rgba($red, 0.6);
+        position: relative;
+        max-width: 100%;
+        border-radius: 50%;
+        z-index: 3;
+    }
+    &:after,
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+    &:after {
+        border: 0.5rem solid $red;
+        z-index: 2;
+        top: 1rem;
+        left: -1rem;
+    }
+    &:before {
+        border: 0.5rem solid $css3;
+        z-index: 1;
+        top: -2rem;
+        left: 1rem;
     }
 }

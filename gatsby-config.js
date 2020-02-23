@@ -4,6 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+
 module.exports = {
   siteMetadata: {
     siteUrl: `https://jfreitas.dev`,
@@ -12,13 +13,11 @@ module.exports = {
       `Hi`,
       `Olá`,
     ],
-    name: [
-      {
-        first: `J.`,
-        middle: `de`,
-        last: `Freitas`
-      }
-    ],
+    name: {
+      first: `J.`,
+      middle: `de`,
+      last: `Freitas`,
+    },
     title: `Software Developer`,
     aboutMeIntro: `I am a Full-Stack Web Developer with passion in build things with code.`,
     socialMedia: [
