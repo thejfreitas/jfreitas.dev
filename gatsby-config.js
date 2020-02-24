@@ -61,5 +61,11 @@ module.exports = {
         display: 'swap'
       }
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-75050740-1",
+      },
+    },
   ]
 }
