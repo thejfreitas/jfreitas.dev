@@ -67,5 +67,18 @@ module.exports = {
         trackingId: "UA-75050740-1",
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `jfreitas.dev`,
+        short_name: `jfreitas.dev`,
+        start_url: `/`,
+        background_color: `#e34f26`,
+        theme_color: `#e34f26`,
+        display: `standalone`,
+        icon: `src/img/favicon/icon.png`,
+      },
+    },
+    `gatsby-plugin-offline`,
   ]
 }
