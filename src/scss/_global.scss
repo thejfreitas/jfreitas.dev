@@ -26,11 +26,11 @@ h6 {
 
 a {
     text-decoration: none;
-    color: $text-colour;
+    color: $main-colour;
     position: relative;
     &:hover,
     &:focus {
-        color: $main-colour;
+        color: lighten($main-colour, 10);
         text-decoration: underline;
     }
 }
@@ -51,20 +51,28 @@ a {
     height: 50rem;
     display: flex;
     align-items: center;
-}
-
-.greeting-area {
-    .greeting {
+    @media (max-width: $breakpoint-md) {
+        flex-direction: column;
+        height: auto;
     }
 }
 
 .name {
     font-size: 8rem;
     font-style: italic;
+    @media (max-width: $breakpoint-md) {
+        font-size: 6rem;
+    }
+    @media (max-width: $breakpoint-sm) {
+        font-size: 4rem;
+    }
 }
 
 nav {
     text-align: right;
+    @media (max-width: $breakpoint-md) {
+        text-align: center;
+    }
     .nav-list {
         padding-left: 0;
         li {
@@ -73,6 +81,7 @@ nav {
                 margin-right: 4rem;
             }
             a {
+                color: $text-colour;
                 font-style: italic;
                 font-weight: bold;
                 &.ico {
@@ -137,6 +146,23 @@ figure {
         top: -2rem;
         left: 1rem;
     }
+
+    @media (max-width: $breakpoint-md) {
+        text-align: center;
+        margin-top: 3rem;
+        .headshot {
+            max-width: 70%;
+        }
+        &:after,
+        &:before {
+            content: unset;
+        }
+    }
+    @media (max-width: $breakpoint-sm) {
+        .headshot {
+            max-width: 50%;
+        }
+    }
 }
 
 .unde-the-hood-area {
@@ -165,6 +191,14 @@ figure {
         bottom: 0;
         background-image: url(../img/paper-border-bottom.png);
     }
+
+    @media (max-width: $breakpoint-md) {
+        height: 25rem;
+        &:after,
+        &:before {
+            height: 8rem;
+        }
+    }
 }
 
 footer {
@@ -175,5 +209,11 @@ footer {
     }
     .code-source {
         text-align: right;
+    }
+    @media (max-width: $breakpoint-md) {
+        .credits,
+        .code-source {
+            text-align: center;
+        }
     }
 }
