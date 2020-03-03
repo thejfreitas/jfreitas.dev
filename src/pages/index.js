@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../templates/layout-wrap"
 import jfreitas from "../img/jfreitas-developer.jpg"
+import SEO from "../components/seo"
 
 export default () => {
 
@@ -17,6 +18,7 @@ export default () => {
                 }
                 greetings
                 aboutMeIntro
+                title
             }
         }    
     }`
@@ -26,6 +28,10 @@ export default () => {
 
   return (
     <Layout>
+      <SEO
+        name={`${name.first} ${name.middle} ${name.last}`}
+        title={pageData.site.siteMetadata.title}
+        aboutMeIntro={pageData.site.siteMetadata.aboutMeIntro} />
       <section className="container hero-intro">
         <div className="pure-u-1 pure-u-md-2-3">
           <p className="greeting-area">
