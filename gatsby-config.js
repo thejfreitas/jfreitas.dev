@@ -7,47 +7,47 @@
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://jfreitas.dev`,
+    siteUrl: 'https://jfreitas.dev',
     greetings: [
-      `Hello`,
-      `Hi`,
-      `Olá`,
+      'Hello',
+      'Hi',
+      'Olá',
     ],
     name: {
-      first: `J.`,
-      middle: `de`,
-      last: `Freitas`,
+      first: 'J.',
+      middle: 'de',
+      last: 'Freitas',
     },
-    title: `Software Developer`,
-    aboutMeIntro: `I am a Full-Stack Web Developer with passion in build things with code.`,
+    title: 'Software Developer',
+    aboutMeIntro: 'I am a Full-Stack Web Developer with passion in build things with code.',
     socialMedia: [
       {
-        name: `LinkedIn`,
-        url: `https://www.linkedin.com/in/juniormfreitas/`,
-        icoClass: `linkedin`
+        name: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/juniormfreitas/',
+        icoClass: 'linkedin'
       },
       {
-        name: `Github`,
-        url: `https://github.com/juniormfreitas`,
-        icoClass: `github`
+        name: 'Github',
+        url: 'https://github.com/juniormfreitas',
+        icoClass: 'github'
       },
       {
-        name: `Twitter`,
-        url: `https://twitter.com/juniormfreitas`,
-        icoClass: `twitter`
+        name: 'Twitter',
+        url: 'https://twitter.com/juniormfreitas',
+        icoClass: 'twitter'
       },
     ]
   },
   plugins: [
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-sass',
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: 'gatsby-plugin-prefetch-google-fonts',
       options: {
         fonts: [
           {
             family: 'Poppins',
-            variants: [`400`, `500`]
+            variants: ['400', '500']
           },
         ],
       },
@@ -68,18 +68,18 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `jfreitas.dev`,
-        short_name: `jfreitas.dev`,
-        start_url: `/`,
-        background_color: `#e34f26`,
-        theme_color: `#e34f26`,
-        display: `standalone`,
+        name: 'jfreitas.dev',
+        short_name: 'jfreitas.dev',
+        start_url: '/',
+        background_color: '#e34f26',
+        theme_color: '#e34f26',
+        display: 'standalone',
         icon: 'src/img/favicon/icon.png',
       },
     },
-    `gatsby-plugin-offline`,
+    'gatsby-plugin-offline',
     'gatsby-plugin-robots-txt',
   ]
 }
