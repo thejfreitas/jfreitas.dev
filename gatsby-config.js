@@ -53,10 +53,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          `Poppins\:400,500`
+          'Poppins\:400,500'
         ],
         display: 'swap'
       }
