@@ -56,6 +56,11 @@ a {
         flex-direction: column;
         height: auto;
     }
+    &-about {
+        p {
+            line-height: initial;
+        }
+    }
 }
 
 .name {
@@ -117,10 +122,12 @@ nav {
 }
 
 figure {
+    transition: 0.3s ease all;
     object-fit: fill;
-    margin: 0;
+    margin: 1rem;
     position: relative;
     .headshot {
+        transition: 0.3s ease all;
         border: 0.5rem solid rgba($red, 0.6);
         position: relative;
         max-width: 100%;
@@ -140,12 +147,14 @@ figure {
         z-index: 2;
         top: 1rem;
         left: -1rem;
+        background-color: lighten($red, 10%);
     }
     &:before {
         border: 0.5rem solid $second-colour;
         z-index: 1;
         top: -2rem;
         left: 1rem;
+        background-color: lighten($second-colour, 10%);
     }
 
     @media (max-width: $breakpoint-md) {
@@ -161,7 +170,7 @@ figure {
     }
     @media (max-width: $breakpoint-sm) {
         .headshot {
-            max-width: 50%;
+            max-width: 60%;
         }
     }
 }
