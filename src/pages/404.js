@@ -40,7 +40,7 @@ export default () => {
               anymore.
             </p>
             <p>
-              <Link to="/">Back to the homelage</Link>
+              <Link to="/">Back to the homepage</Link>
             </p>
           </div>
         </div>
