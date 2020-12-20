@@ -1,6 +1,5 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import "../scss/main.scss"
 import { graphql, useStaticQuery } from "gatsby"
 import MainNavigation from "../components/main-navigation"
 
