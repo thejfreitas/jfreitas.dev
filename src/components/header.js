@@ -1,10 +1,9 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql, useStaticQuery } from "gatsby"
-import MainNavigation from "../components/main-navigation"
+import MainNavigation from "./MainNavigation"
 
-export default () => {
-
+const Header = () => {
     const headerData = useStaticQuery(
         graphql`
         query MainHeader {
@@ -36,3 +35,5 @@ export default () => {
         </React.Fragment>
     )
 }
+
+export default Header;

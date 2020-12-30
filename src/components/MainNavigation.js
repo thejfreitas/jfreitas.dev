@@ -1,6 +1,6 @@
 import React from "react"
 
-export default ({ socialMedia }) => (
+const MainNavigation = ({ socialMedia }) => (
     <nav className="nav pure-u-1">
         <ul className="nav-list">
             {socialMedia.map((item, i) => {
@@ -13,3 +13,5 @@ export default ({ socialMedia }) => (
         </ul>
     </nav>
 )
+
+export default MainNavigation;
