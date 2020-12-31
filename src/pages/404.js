@@ -46,7 +46,7 @@ export default () => {
         </div>
       </section>
 
-      <section className="unde-the-hood-area"></section>
+      <section className="under-the-hood-area"></section>
     </Layout>
   )
 }
