@@ -43,17 +43,6 @@ module.exports = {
     },
     "gatsby-plugin-react-helmet",
     {
-      resolve: "gatsby-plugin-prefetch-google-fonts",
-      options: {
-        fonts: [
-          {
-            family: "Poppins",
-            variants: ["400", "500"],
-          },
-        ],
-      },
-    },
-    {
       resolve: "gatsby-plugin-google-fonts",
       options: {
         fonts: ["Poppins:400,500"],
