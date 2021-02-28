@@ -20,11 +20,11 @@
     "gatsby-plugin-react-helmet": "^3.7.0",
     "gatsby-plugin-robots-txt": "^1.5.5",
     "gatsby-plugin-sass": "^3.2.0",
-    "node-sass": "^4.14.1",
     "purecss": "^1.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "sass": "^1.32.8"
   },
   "devDependencies": {
     "gatsby-plugin-google-fonts": "^1.0.1",
