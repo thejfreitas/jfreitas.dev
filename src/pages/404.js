@@ -3,7 +3,7 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import Layout from "../templates/layout-wrap"
 import SEO from "../components/seo"
 
-export default () => {
+export default function Page404() {
   const pageData = useStaticQuery(
     graphql`
       query NotFound {

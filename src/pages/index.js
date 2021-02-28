@@ -4,7 +4,7 @@ import Layout from "../templates/layout-wrap"
 import jfreitas from "../img/jfreitas-developer.jpg"
 import SEO from "../components/seo"
 
-export default () => {
+export default function Index() {
   const pageData = useStaticQuery(
     graphql`
       query Index {
