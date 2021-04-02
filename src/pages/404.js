@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Layout from "../templates/layout-wrap"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 export default function Page404() {
   const pageData = useStaticQuery(
@@ -24,7 +24,7 @@ export default function Page404() {
 
   return (
     <Layout>
-      <SEO
+      <Seo
         name={`${name.first} ${name.middle} ${name.last}`}
         title="Not found - 404"
         aboutMeIntro="This page does not exist or isn't available

@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../templates/layout-wrap"
 import jfreitas from "../img/jfreitas-developer.jpg"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 export default function Index() {
   const pageData = useStaticQuery(
@@ -28,7 +28,7 @@ export default function Index() {
 
   return (
     <Layout>
-      <SEO
+      <Seo
         name={`${name.first} ${name.middle} ${name.last}`}
         title={pageData.site.siteMetadata.title}
         aboutMeIntro={pageData.site.siteMetadata.aboutMeIntro}
