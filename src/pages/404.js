@@ -20,12 +20,12 @@ export default function Page404() {
     `
   )
 
-  const name = pageData.site.siteMetadata.name
+  const {first, middle, last} = pageData.site.siteMetadata.name
 
   return (
     <Layout>
       <Seo
-        name={`${name.first} ${name.middle} ${name.last}`}
+        name={`${first} ${middle} ${last}`}
         title="Not found - 404"
         aboutMeIntro="This page does not exist or isn't available
         anymore."
