@@ -4,7 +4,7 @@ const MainNavigation = ({ socialMedia }) => (
   <nav className="nav pure-u-1">
     <ul className="nav-list">
       {socialMedia.map((item, index) => {
-        const { item, name, icoClass, url } = item;
+        const { name, icoClass, url } = item;
 
         return (
           <li key={index} className="nav-item">

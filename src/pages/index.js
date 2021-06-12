@@ -70,7 +70,7 @@ export default function Index() {
 
         <div className="pure-u-1 pure-u-md-1-3">
           <figure>
-            <img className="headshot" src={jfreitas} alt={name.last} />
+            <img className="headshot" src={jfreitas} alt={last} />
           </figure>
         </div>
       </section>
