@@ -3,10 +3,20 @@ import React from "react"
 const MainNavigation = ({ socialMedia }) => (
   <nav className="nav pure-u-1">
     <ul className="nav-list">
-      {socialMedia.map((item, i) => {
+      {socialMedia.map((item, index) => {
+        const { item, name, icoClass, url } = item;
+
         return (
-          <li key={i} className="nav-item">
-            <a href={item.url} aria-label={item.name} target="_blank" rel="noopener noreferrer" className={item.icoClass + ` ico`}><span>{item.name}</span></a>
+          <li key={index} className="nav-item">
+            <a
+              href={url}
+              aria-label={name}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${icoClass} ico`}
+            >
+              <span>{name}</span>
+            </a>
           </li>
         )
       })}
@@ -14,4 +24,4 @@ const MainNavigation = ({ socialMedia }) => (
   </nav>
 )
 
-export default MainNavigation;
+export default MainNavigation

@@ -7,20 +7,21 @@ const Header = () => {
   const headerData = useStaticQuery(
     graphql`
       query MainHeader {
-      site {
-        siteMetadata {
-          name {
-            middle
-            last
-          }
-          socialMedia {
-            name
-            url
-            icoClass
+        site {
+          siteMetadata {
+            name {
+              middle
+              last
+            }
+            socialMedia {
+              name
+              url
+              icoClass
+            }
           }
         }
-      }    
-    }`
+      }
+    `
   )
 
   return (
@@ -30,10 +31,12 @@ const Header = () => {
         <meta charSet="utf-8" />
       </Helmet>
       <header className="container pure-g">
-        <MainNavigation socialMedia={headerData.site.siteMetadata.socialMedia} />
+        <MainNavigation
+          socialMedia={headerData.site.siteMetadata.socialMedia}
+        />
       </header>
     </React.Fragment>
   )
 }
 
-export default Header;
+export default Header

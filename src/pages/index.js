@@ -24,12 +24,12 @@ export default function Index() {
     `
   )
 
-  const name = pageData.site.siteMetadata.name
+  const { first, middle, last } = pageData.site.siteMetadata.name
 
   return (
     <Layout>
       <Seo
-        name={`${name.first} ${name.middle} ${name.last}`}
+        name={`${first} ${middle} ${last}`}
         title={pageData.site.siteMetadata.title}
         aboutMeIntro={pageData.site.siteMetadata.aboutMeIntro}
       />
@@ -42,7 +42,7 @@ export default function Index() {
             <span className="intro">, my name is</span>
           </p>
           <h1 className="name">
-            {name.first} {name.middle} {name.last}
+            {first} {middle} {last}
           </h1>
 
           <div className="pure-u-1 pure-u-md-2-3 hero-intro-about">

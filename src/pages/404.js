@@ -20,7 +20,7 @@ export default function Page404() {
     `
   )
 
-  const {first, middle, last} = pageData.site.siteMetadata.name
+  const { first, middle, last } = pageData.site.siteMetadata.name
 
   return (
     <Layout>
