@@ -71,5 +71,14 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-robots-txt',
+    'gatsby-plugin-image',
+    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        breakpoints: [576, 768, 992, 1200],
+        backgroundColor: "transparent"
+      }
+    },
   ],
 }

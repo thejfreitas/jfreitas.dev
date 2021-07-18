@@ -121,58 +121,10 @@ nav {
     }
 }
 
-figure {
-    transition: 0.3s ease all;
-    object-fit: fill;
-    margin: 1rem;
-    position: relative;
-    .headshot {
-        transition: 0.3s ease all;
-        border: 0.5rem solid rgba($red, 0.6);
-        position: relative;
-        max-width: 100%;
-        border-radius: 50%;
-        z-index: 3;
-    }
-    &:after,
-    &:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-    }
-    &:after {
-        border: 0.5rem solid $red;
-        z-index: 2;
-        top: 1rem;
-        left: -1rem;
-        background-color: lighten($red, 10%);
-    }
-    &:before {
-        border: 0.5rem solid $second-colour;
-        z-index: 1;
-        top: -2rem;
-        left: 1rem;
-        background-color: lighten($second-colour, 10%);
-    }
-
-    @media (max-width: $breakpoint-md) {
-        text-align: center;
-        margin-top: 3rem;
-        .headshot {
-            max-width: 70%;
-        }
-        &:after,
-        &:before {
-            content: unset;
-        }
-    }
-    @media (max-width: $breakpoint-sm) {
-        .headshot {
-            max-width: 60%;
-        }
-    }
+.headshot {
+    border: 0.5rem solid rgba($red, 0.6);
+    border-radius: 50%;
+    z-index: 3;
 }
 
 .under-the-hood-area {
