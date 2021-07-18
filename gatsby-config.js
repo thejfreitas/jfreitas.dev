@@ -52,12 +52,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: 'UA-75050740-3',
-      },
-    },
-    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'jfreitas.dev',
@@ -79,6 +73,17 @@ module.exports = {
         breakpoints: [576, 768, 992, 1200],
         backgroundColor: "transparent"
       }
+    },
+    {
+      resolve: "gatsby-plugin-google-gtag",
+      options: {
+        trackingIds: [
+          "UA-75050740-3",
+        ],
+        pluginConfig: {
+          head: false,
+        },
+      },
     },
   ],
 }
