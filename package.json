@@ -32,7 +32,7 @@
     "gatsby-source-filesystem": "^3.10.0",
     "gatsby-transformer-sharp": "^3.10.0",
     "prettier": "^2.3.2",
-    "sass": "^1.35.2"
+    "sass": "^1.37.0"
   },
   "repository": {
     "type": "git",
