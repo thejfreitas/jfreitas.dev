@@ -25,17 +25,17 @@ const Header = () => {
   )
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <html lang="en" />
         <meta charSet="utf-8" />
       </Helmet>
-      <header className="container pure-g">
+      <header className="container">
         <MainNavigation
           socialMedia={headerData.site.siteMetadata.socialMedia}
         />
       </header>
-    </React.Fragment>
+    </>
   )
 }
 

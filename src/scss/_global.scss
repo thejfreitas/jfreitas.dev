@@ -127,42 +127,6 @@ nav {
     z-index: 3;
 }
 
-.under-the-hood-area {
-    background-image: url(../img/under-the-hood.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    height: 40rem;
-
-    &:after,
-    &:before {
-        content: "";
-        height: 14rem;
-        width: 100%;
-        position: absolute;
-        z-index: 2;
-        background-size: cover;
-    }
-
-    &:before {
-        top: 0;
-        background-image: url(../img/paper-border-top.png);
-    }
-
-    &:after {
-        bottom: 0;
-        background-image: url(../img/paper-border-bottom.png);
-    }
-
-    @media (max-width: $breakpoint-md) {
-        height: 25rem;
-        &:after,
-        &:before {
-            height: 8rem;
-        }
-    }
-}
-
 footer {
     font-size: 1.4rem;
     text-align: center;

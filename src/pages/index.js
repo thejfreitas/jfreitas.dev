@@ -35,46 +35,42 @@ export default function Index() {
         aboutMeIntro={pageData.site.siteMetadata.aboutMeIntro}
       />
       <section className="container hero-intro">
-        <div className="pure-u-1 pure-u-md-2-3">
-          <p className="greeting-area">
-            <span className="greeting">
-              {pageData.site.siteMetadata.greetings[0]}
-            </span>
-            <span className="intro">, my name is</span>
+
+        <p className="greeting-area">
+          <span className="greeting">
+            {pageData.site.siteMetadata.greetings[0]}
+          </span>
+          <span className="intro">, my name is</span>
+        </p>
+        <h1 className="name">
+          {first} {middle} {last}
+        </h1>
+
+        <div className="hero-intro-about">
+          <p>
+            I am a Full Stack Web Developer with expertise in build and
+            maintaining systems, APIs and websites. More than 6 years of
+            progressive experience in the software development industry I am
+            passionate in helping companies and individuals elevate their
+            brands and reach the next level in their business.
           </p>
-          <h1 className="name">
-            {first} {middle} {last}
-          </h1>
 
-          <div className="pure-u-1 pure-u-md-2-3 hero-intro-about">
-            <p>
-              I am a Full Stack Web Developer with expertise in build and
-              maintaining systems, APIs and websites. More than 6 years of
-              progressive experience in the software development industry I am
-              passionate in helping companies and individuals elevate their
-              brands and reach the next level in their business.
-            </p>
-
-            <p>
-              I love to spend my free time learning more about new technologies
-              in order to apply on my next projects as well exploring{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://jfreitas.photos"
-              >
-                Canada with my camera
-              </a>
-            </p>
-          </div>
+          <p>
+            I love to spend my free time learning more about new technologies
+            in order to apply on my next projects as well exploring{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://jfreitas.photos"
+            >
+              Canada with my camera
+            </a>
+          </p>
         </div>
 
-        <div className="pure-u-1 pure-u-md-1-3">
-          <StaticImage src="../img/jfreitas-developer.jpg" className="headshot" alt={last} />
-        </div>
+        <StaticImage src="../img/jfreitas-developer.jpg" className="headshot" alt={last} />
+
       </section>
-
-      <section className="under-the-hood-area"></section>
     </Layout>
   )
 }

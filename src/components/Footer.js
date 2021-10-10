@@ -20,13 +20,13 @@ const Footer = () => {
   const { siteAddress, repository } = siteDataQuery.site.siteMetadata
 
   return (
-    <footer className="container pure-g">
-      <div className="pure-u-1 pure-u-md-1-2 credits">
+    <footer className="container">
+      <div className=" credits">
         <p>
           {siteAddress} {year} &bull; Handcrafted by me
         </p>
       </div>
-      <div className="pure-u-1 pure-u-md-1-2 code-source">
+      <div className=" code-source">
         <p>
           <a href={repository} target="_blank" rel="noopener noreferrer">
             How I built this website

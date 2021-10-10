@@ -31,22 +31,20 @@ export default function Page404() {
         anymore."
       />
       <section className="container hero-intro">
-        <div className="pure-u-1">
-          <h1 className="name">Error 404</h1>
 
-          <div className="pure-u-1 pure-u-md-2-3 hero-intro-about">
-            <p>
-              Page not found - This page does not exist or isn't available
-              anymore.
-            </p>
-            <p>
-              <Link to="/">Back to the homepage</Link>
-            </p>
-          </div>
+        <h1 className="name">Error 404</h1>
+
+        <div className=" hero-intro-about">
+          <p>
+            Page not found - This page does not exist or isn't available
+            anymore.
+          </p>
+          <p>
+            <Link to="/">Back to the homepage</Link>
+          </p>
         </div>
-      </section>
 
-      <section className="under-the-hood-area"></section>
+      </section>
     </Layout>
   )
 }

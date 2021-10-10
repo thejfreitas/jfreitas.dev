@@ -1,7 +1,7 @@
 import React from "react"
 
 const MainNavigation = ({ socialMedia }) => (
-  <nav className="nav pure-u-1">
+  <nav className="nav">
     <ul className="nav-list">
       {socialMedia.map((item, index) => {
         const { name, icoClass, url } = item;
