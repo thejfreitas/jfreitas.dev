@@ -8,15 +8,13 @@ module.exports = {
   siteMetadata: {
     siteUrl: 'https://jfreitas.dev',
     siteAddress: 'jfreitas.dev',
-    greetings: ['Hello', 'Hi', 'Olá'],
+    greetings: ['Hello', 'Hi', 'Olá', 'Howdy', 'Bonjour', 'Hola'],
     name: {
       first: 'J.',
-      middle: 'de',
-      last: 'Freitas',
+      last: 'de Freitas',
     },
     title: 'Software Developer',
-    aboutMeIntro:
-      'I am a Full-Stack Web Developer with passion in build things with code.',
+    aboutMeIntro: 'I am a Full-Stack Web Developer with passion in build things with code.',
     socialMedia: [
       {
         name: 'LinkedIn',
@@ -35,6 +33,23 @@ module.exports = {
       },
     ],
     repository: 'https://github.com/juniormfreitas/jfreitas.dev',
+    navigation: [
+      {
+        label: 'Home',
+        path: '/',
+        icon: '',
+      },
+      {
+        label: 'Blog',
+        path: '/blog',
+        icon: '',
+      },
+      {
+        label: 'About me',
+        path: '/about',
+        icon: '',
+      },
+    ],
   },
   plugins: [
     {
@@ -71,19 +86,17 @@ module.exports = {
       resolve: 'gatsby-plugin-sharp',
       options: {
         breakpoints: [576, 768, 992, 1200],
-        backgroundColor: "transparent"
-      }
+        backgroundColor: 'transparent',
+      },
     },
     {
-      resolve: "gatsby-plugin-google-gtag",
+      resolve: 'gatsby-plugin-google-gtag',
       options: {
-        trackingIds: [
-          "UA-75050740-3",
-        ],
+        trackingIds: ['UA-75050740-3'],
         pluginConfig: {
           head: false,
         },
       },
     },
   ],
-}
+};
