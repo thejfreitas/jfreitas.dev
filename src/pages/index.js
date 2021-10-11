@@ -47,14 +47,6 @@ export default function Index() {
           I am passionate in helping companies and individuals elevate their brands and reach the
           next level in their business.
         </p>
-
-        <p>
-          I love to spend my free time learning more about new technologies in order to apply on my
-          next projects as well exploring{' '}
-          <a target="_blank" rel="noopener noreferrer" href="https://jfreitas.photos">
-            Canada with my camera
-          </a>
-        </p>
       </div>
     </Layout>
   );
