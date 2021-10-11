@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-size: 1.6rem;
     color: $text-colour;
     background-color: $bg-colour;
@@ -74,53 +74,6 @@ a {
     }
 }
 
-nav {
-    text-align: right;
-    @media (max-width: $breakpoint-md) {
-        text-align: center;
-    }
-    .nav-list {
-        padding-left: 0;
-        li {
-            display: inline;
-            &:not(:last-child) {
-                margin-right: 4rem;
-            }
-            a {
-                color: $text-colour;
-                font-style: italic;
-                font-weight: bold;
-                &.ico {
-                    &::before {
-                        content: "";
-                        background-repeat: no-repeat;
-                        position: absolute;
-                        width: 2rem;
-                        height: 2rem;
-                        top: -0.2rem;
-                        left: -2.5rem;
-                    }
-                    &.linkedin {
-                        &::before {
-                            background-image: url(../img/linkedin.svg);
-                        }
-                    }
-                    &.github {
-                        &::before {
-                            background-image: url(../img/github.svg);
-                        }
-                    }
-                    &.twitter {
-                        &::before {
-                            background-image: url(../img/twitter.svg);
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
 .headshot {
     border: 0.5rem solid rgba($red, 0.6);
     border-radius: 50%;
@@ -130,16 +83,4 @@ nav {
 footer {
     font-size: 1.4rem;
     text-align: center;
-    .credits {
-        text-align: left;
-    }
-    .code-source {
-        text-align: right;
-    }
-    @media (max-width: $breakpoint-md) {
-        .credits,
-        .code-source {
-            text-align: center;
-        }
-    }
 }

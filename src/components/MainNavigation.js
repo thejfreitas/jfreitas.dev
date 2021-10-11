@@ -1,27 +1,66 @@
-import React from "react"
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
-const MainNavigation = ({ socialMedia }) => (
-  <nav className="nav">
-    <ul className="nav-list">
-      {socialMedia.map((item, index) => {
-        const { name, icoClass, url } = item;
+const MainNavigation = () => {
+  const headerData = useStaticQuery(
+    graphql`
+      query MainHeader {
+        site {
+          siteMetadata {
+            socialMedia {
+              name
+              url
+              icoClass
+            }
+            navigation {
+              label
+              path
+            }
+          }
+        }
+      }
+    `,
+  );
 
-        return (
-          <li key={index} className="nav-item">
-            <a
-              href={url}
-              aria-label={name}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${icoClass} ico`}
-            >
-              <span>{name}</span>
-            </a>
-          </li>
-        )
-      })}
-    </ul>
-  </nav>
-)
+  const { socialMedia, navigation } = headerData.site.siteMetadata;
 
-export default MainNavigation
+  return (
+    <nav>
+      <ul>
+        {navigation.map((item, index) => {
+          const { label, path } = item;
+
+          return (
+            <li key={index}>
+              <a href={path} aria-label={label}>
+                <span>{label}</span>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+
+      <ul>
+        {socialMedia.map((item, index) => {
+          const { name, icoClass, url } = item;
+
+          return (
+            <li key={index}>
+              <a
+                href={url}
+                aria-label={name}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${icoClass} ico`}
+              >
+                <span>{name}</span>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  );
+};
+
+export default MainNavigation;
