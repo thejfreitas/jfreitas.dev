@@ -4,7 +4,6 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../templates/layout-wrap"
 import Seo from "../components/seo"
 
-
 export default function Index() {
   const pageData = useStaticQuery(
     graphql`
@@ -49,7 +48,7 @@ export default function Index() {
           <div className="pure-u-1 pure-u-md-2-3 hero-intro-about">
             <p>
               I am a Full Stack Web Developer with expertise in build and
-              maintaining systems, APIs and websites. More than 6 years of
+              maintaining systems, APIs and websites. More than 8 years of
               progressive experience in the software development industry I am
               passionate in helping companies and individuals elevate their
               brands and reach the next level in their business.
@@ -70,7 +69,11 @@ export default function Index() {
         </div>
 
         <div className="pure-u-1 pure-u-md-1-3">
-          <StaticImage src="../img/jfreitas-developer.jpg" className="headshot" alt={last} />
+          <StaticImage
+            src="../img/jfreitas-developer.jpg"
+            className="headshot"
+            alt={last}
+          />
         </div>
       </section>
 
