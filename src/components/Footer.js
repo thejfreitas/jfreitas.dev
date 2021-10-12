@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
 const Footer = () => {
-  const year = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
 
   const siteDataQuery = useStaticQuery(
     graphql`
@@ -23,7 +23,7 @@ const Footer = () => {
     <footer className="container">
       <div>
         <p>
-          {siteAddress} {year} &bull; Handcrafted by me
+          {siteAddress} {currentYear} &bull; Handcrafted by me
         </p>
       </div>
       <div>

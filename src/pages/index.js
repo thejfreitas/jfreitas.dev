@@ -16,6 +16,7 @@ export default function Index() {
             greetings
             aboutMeIntro
             title
+            since
           }
         }
       }
@@ -23,6 +24,8 @@ export default function Index() {
   );
 
   const { first, last } = pageData.site.siteMetadata.name;
+
+  const currentYear = new Date().getFullYear();
 
   return (
     <Layout>
@@ -43,9 +46,9 @@ export default function Index() {
       <div>
         <p>
           I am a Full Stack Web Developer with expertise in build and maintaining systems, APIs and
-          websites. More than 6 years of progressive experience in the software development industry
-          I am passionate in helping companies and individuals elevate their brands and reach the
-          next level in their business.
+          websites. More than {currentYear - pageData.site.siteMetadata.since} years of progressive
+          experience in the software development industry I am passionate in helping companies and
+          individuals elevate their brands and reach the next level in their business.
         </p>
       </div>
     </Layout>

@@ -15,21 +15,22 @@ module.exports = {
     },
     title: 'Software Developer',
     aboutMeIntro: 'I am a Full-Stack Web Developer with passion in build things with code.',
+    since: 2013,
     socialMedia: [
       {
         name: 'LinkedIn',
         url: 'https://www.linkedin.com/in/juniormfreitas/',
-        icoClass: 'linkedin',
+        icon: 'linkedin',
       },
       {
         name: 'Github',
         url: 'https://github.com/juniormfreitas',
-        icoClass: 'github',
+        icon: 'github',
       },
       {
         name: 'Twitter',
         url: 'https://twitter.com/juniormfreitas',
-        icoClass: 'twitter',
+        icon: 'twitter',
       },
     ],
     repository: 'https://github.com/juniormfreitas/jfreitas.dev',
@@ -37,17 +38,17 @@ module.exports = {
       {
         label: 'Home',
         path: '/',
-        icon: '',
+        icon: 'home',
       },
       {
         label: 'Blog',
         path: '/blog',
-        icon: '',
+        icon: 'blog',
       },
       {
         label: 'About me',
         path: '/about',
-        icon: '',
+        icon: 'user',
       },
     ],
   },
@@ -82,13 +83,7 @@ module.exports = {
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-image',
     'gatsby-transformer-sharp',
-    {
-      resolve: 'gatsby-plugin-sharp',
-      options: {
-        breakpoints: [576, 768, 992, 1200],
-        backgroundColor: 'transparent',
-      },
-    },
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-google-gtag',
       options: {
