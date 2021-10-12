@@ -10,11 +10,12 @@ const MainNavigation = () => {
             socialMedia {
               name
               url
-              icoClass
+              icon
             }
             navigation {
               label
               path
+              icon
             }
           }
         }
@@ -29,12 +30,12 @@ const MainNavigation = () => {
       <nav>
         <ul>
           {navigation.map((item, index) => {
-            const { label, path } = item;
+            const { label, path, icon } = item;
 
             return (
               <li key={index}>
                 <a href={path} aria-label={label}>
-                  <span>{label}</span>
+                  <img src={`${icon}.svg`} alt={label} />
                 </a>
               </li>
             );
@@ -44,18 +45,12 @@ const MainNavigation = () => {
       <nav>
         <ul>
           {socialMedia.map((item, index) => {
-            const { name, icoClass, url } = item;
+            const { name, icon, url } = item;
 
             return (
               <li key={index}>
-                <a
-                  href={url}
-                  aria-label={name}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${icoClass} ico`}
-                >
-                  <span>{name}</span>
+                <a href={url} aria-label={name} target="_blank" rel="noopener noreferrer">
+                  <img src={`${icon}.svg`} alt={name} />
                 </a>
               </li>
             );
