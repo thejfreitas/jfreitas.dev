@@ -1,14 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from './layout';
+import LayoutWrap from './layout-wrap';
 
 export default function Post({ data }) {
   const post = data.markdownRemark;
   return (
-    <Layout headerText={post.frontmatter.title}>
+    <LayoutWrap headerText={post.frontmatter.title}>
       <h1>{post.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
-    </Layout>
+    </LayoutWrap>
   );
 }
 
