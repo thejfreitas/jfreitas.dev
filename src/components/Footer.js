@@ -1,8 +1,8 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const Footer = () => {
-  const year = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   const siteDataQuery = useStaticQuery(
     graphql`
@@ -14,19 +14,19 @@ const Footer = () => {
           }
         }
       }
-    `
-  )
+    `,
+  );
 
-  const { siteAddress, repository } = siteDataQuery.site.siteMetadata
+  const { siteAddress, repository } = siteDataQuery.site.siteMetadata;
 
   return (
-    <footer className="container pure-g">
-      <div className="pure-u-1 pure-u-md-1-2 credits">
+    <footer className="container">
+      <div>
         <p>
-          {siteAddress} {year} &bull; Handcrafted by me
+          {siteAddress} {currentYear} &bull; Handcrafted by me
         </p>
       </div>
-      <div className="pure-u-1 pure-u-md-1-2 code-source">
+      <div>
         <p>
           <a href={repository} target="_blank" rel="noopener noreferrer">
             How I built this website
@@ -34,7 +34,7 @@ const Footer = () => {
         </p>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
