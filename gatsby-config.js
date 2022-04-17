@@ -18,21 +18,21 @@ module.exports = {
     socialMedia: [
       {
         name: 'LinkedIn',
-        url: 'https://www.linkedin.com/in/juniormfreitas/',
+        url: 'https://www.linkedin.com/in/thejfreitas/',
         icon: 'linkedin',
       },
       {
         name: 'Github',
-        url: 'https://github.com/juniormfreitas',
+        url: 'https://github.com/thejfreitas',
         icon: 'github',
       },
       {
         name: 'Twitter',
-        url: 'https://twitter.com/juniormfreitas',
+        url: 'https://twitter.com/thejfreitas',
         icon: 'twitter',
       },
     ],
-    repository: 'https://github.com/juniormfreitas/jfreitas.dev',
+    repository: 'https://github.com/thejfreitas/jfreitas.dev',
     navigation: [
       {
         label: 'Home',
