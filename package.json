@@ -31,7 +31,7 @@
     "gatsby-source-filesystem": "^4.10.1",
     "gatsby-transformer-remark": "^5.10.2",
     "gatsby-transformer-sharp": "^4.0.0",
-    "prettier": "^2.4.1",
+    "prettier": "^2.6.2",
     "sass": "^1.50.0"
   },
   "repository": {
