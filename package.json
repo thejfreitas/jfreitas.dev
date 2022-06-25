@@ -32,7 +32,7 @@
     "gatsby-transformer-remark": "^5.15.0",
     "gatsby-transformer-sharp": "^4.15.0",
     "prettier": "^2.6.2",
-    "sass": "^1.52.1"
+    "sass": "^1.53.0"
   },
   "repository": {
     "type": "git",
