@@ -9,11 +9,11 @@ module.exports = {
     siteAddress: 'jfreitas.dev',
     greetings: ['Hello', 'Hi', 'Olá', 'Howdy', 'Bonjour', 'Hola'],
     name: {
-      first: 'J.',
-      last: 'de Freitas',
+      first: 'Jose',
+      last: 'de Freitas Jr.',
     },
-    title: 'Software Developer',
-    aboutMeIntro: 'I am a Full-Stack Web Developer with passion in build things with code.',
+    title: 'Software Engineer',
+    aboutMeIntro: 'I am a Software Engineer with passion in build things with code.',
     since: 2013,
     socialMedia: [
       {
@@ -33,23 +33,6 @@ module.exports = {
       },
     ],
     repository: 'https://github.com/thejfreitas/jfreitas.dev',
-    navigation: [
-      {
-        label: 'Home',
-        path: '/',
-        icon: 'home',
-      },
-      {
-        label: 'Blog',
-        path: '/blog',
-        icon: 'blog',
-      },
-      {
-        label: 'About me',
-        path: '/about',
-        icon: 'user',
-      },
-    ],
   },
   plugins: [
     {
@@ -72,8 +55,8 @@ module.exports = {
         name: 'jfreitas.dev',
         short_name: 'jfreitas.dev',
         start_url: '/',
-        background_color: '#e34f26',
-        theme_color: '#e34f26',
+        background_color: '#0093e9',
+        theme_color: '#004269',
         display: 'standalone',
         icon: 'src/img/favicon/icon.png',
       },
@@ -81,9 +64,6 @@ module.exports = {
 
     'gatsby-plugin-offline',
     'gatsby-plugin-robots-txt',
-    'gatsby-plugin-image',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-google-gtag',
       options: {
@@ -94,13 +74,5 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'src',
-        path: `${__dirname}/src/`,
-      },
-    },
-    'gatsby-transformer-remark',
   ],
 };

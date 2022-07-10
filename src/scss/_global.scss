@@ -2,7 +2,6 @@
 ::after,
 ::before {
     box-sizing: border-box;
-    line-height: 1;
 }
 
 html {
@@ -13,9 +12,21 @@ html {
 body {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-size: 1.6rem;
-    color: $text-colour;
-    background-color: $bg-colour;
+    color: $text-color;
+    background-color: $bg-color;
     margin: 0;
+    background-color: $bg-color;
+    background-image: linear-gradient(160deg, $bg-color 0%, $bg-color-gradient 100%);
+}
+
+p,
+span,
+a,
+ul,
+ol,
+li,
+img {
+    @include default-text-shadow;
 }
 
 h1,
@@ -24,17 +35,26 @@ h3,
 h4,
 h5,
 h6 {
-    color: $header-colour;
+    color: $header-color;
     margin: 0;
+    display: initial;
+    @include text-shadow-header;
+}
+
+.include-dot {
+    &::after {
+        content: '.';
+        color: $darker-blue;
+    }
 }
 
 a {
     text-decoration: none;
-    color: $main-colour;
+    color: $main-color;
     position: relative;
     &:hover,
     &:focus {
-        color: lighten($main-colour, 10);
+        color: lighten($main-color, 10);
         text-decoration: underline;
     }
 }
@@ -52,27 +72,22 @@ ul {
     min-height: 100vh;
 }
 
-.nav-sidebar {
-    height: 100vh;
-    position: fixed;
-    background-color: lightgray;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    padding: 1.5rem;
+h1 {
+    font-size: 3.2rem;
+}
 
-    nav {
-        ul {
-            li {
-                a {
-                    display: flex;
-                    img {
-                        width: 3rem;
-                    }
+nav {
+    ul {
+        display: flex;
+        flex-direction: row;
+        li {
+            a {
+                img {
+                    width: 3rem;
                 }
-                &:not(:last-child) {
-                    margin-bottom: 1rem;
-                }
+            }
+            &:not(:last-child) {
+                margin-right: 1rem;
             }
         }
     }
@@ -82,7 +97,6 @@ ul {
     width: 100%;
     display: flex;
     flex-flow: column;
-    margin-left: 8rem;
 }
 
 .container {
@@ -97,21 +111,31 @@ ul {
     }
 }
 
-.name {
-    font-size: 8rem;
-    font-style: italic;
-    @media (max-width: $breakpoint-md) {
-        font-size: 6rem;
-    }
-    @media (max-width: $breakpoint-sm) {
-        font-size: 4rem;
+.main-page {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    min-height: calc(100vh - 4.9rem);
+}
+
+.greetings {
+    @include default-transition;
+    display: flex;
+    align-items: center;
+
+    .emoji {
+        font-size: 3rem;
     }
 }
 
-.headshot {
-    border: 0.5rem solid rgba($red, 0.6);
-    border-radius: 50%;
-    z-index: 3;
+.greeting {
+    margin: 0 0.5rem;
+    &::before {
+        content: attr(data-greeting);
+    }
+    &::after {
+        content: ',';
+    }
 }
 
 footer {

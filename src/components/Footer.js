@@ -23,13 +23,9 @@ const Footer = () => {
     <footer className="container">
       <div>
         <p>
-          {siteAddress} {currentYear} &bull; Handcrafted by me
-        </p>
-      </div>
-      <div>
-        <p>
+          {siteAddress} {currentYear} &bull;{' '}
           <a href={repository} target="_blank" rel="noopener noreferrer">
-            How I built this website
+            Handcrafted by me
           </a>
         </p>
       </div>

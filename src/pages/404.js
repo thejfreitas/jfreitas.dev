@@ -29,10 +29,10 @@ export default function Page404() {
         aboutMeIntro="This page does not exist or isn't available
         anymore."
       />
-      <section>
-        <h1>Error 404</h1>
-
+      <section className="main-page">
         <div>
+          <h1>Error 404</h1>
+
           <p>Page not found - This page does not exist or isn't available anymore.</p>
           <p>
             <Link to="/">Back to the homepage</Link>

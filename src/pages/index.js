@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Layout from '../templates/layout-wrap';
 import Seo from '../components/seo';
@@ -17,39 +17,73 @@ export default function Index() {
             aboutMeIntro
             title
             since
+            socialMedia {
+              name
+              url
+              icon
+            }
           }
         }
       }
     `,
   );
 
-  const { first, last } = pageData.site.siteMetadata.name;
+  const { name, since, socialMedia, greetings } = pageData.site.siteMetadata;
+
+  const [currentGreetingIndex, setGreetingIndex] = useState(0);
+
+  useEffect(() => {
+    const maxIndex = greetings.length - 1;
+
+    const interval = setInterval(() => {
+      setGreetingIndex(currentGreetingIndex < maxIndex ? currentGreetingIndex + 1 : 0);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [currentGreetingIndex, greetings.length]);
 
   const currentYear = new Date().getFullYear();
 
   return (
     <Layout>
       <Seo
-        name={`${first} ${last}`}
+        name={`${name.first} ${name.last}`}
         title={pageData.site.siteMetadata.title}
         aboutMeIntro={pageData.site.siteMetadata.aboutMeIntro}
       />
 
-      <p>
-        <span className="greeting">{pageData.site.siteMetadata.greetings[0]}</span>
-        <span className="intro">, my name is</span>
-      </p>
-      <h1>
-        {first} {last}
-      </h1>
+      <div className="main-page">
+        <div>
+          <p className="greetings">
+            <span className="emoji">👋</span>
+            <span className="greeting" data-greeting={greetings[currentGreetingIndex]}></span>
+            <span className="intro">my name is</span>
+          </p>
+          <h1>
+            {name.first} {name.last}
+          </h1>
+          <p>
+            I am a Software Engineer with expertise in build and maintaining systems, APIs and
+            websites with more than {currentYear - since} years of progressive experience in the
+            software development industry.
+          </p>
 
-      <div>
-        <p>
-          I am a Full Stack Web Developer with expertise in build and maintaining systems, APIs and
-          websites. More than {currentYear - pageData.site.siteMetadata.since} years of progressive
-          experience in the software development industry I am passionate in helping companies and
-          individuals elevate their brands and reach the next level in their business.
-        </p>
+          <nav>
+            <ul>
+              {socialMedia.map((item, index) => {
+                const { name, icon, url } = item;
+
+                return (
+                  <li key={index}>
+                    <a href={url} aria-label={name} target="_blank" rel="noopener noreferrer">
+                      <img src={`${icon}.svg`} alt={name} />
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+        </div>
       </div>
     </Layout>
   );

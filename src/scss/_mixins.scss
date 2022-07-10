@@ -1,3 +1,15 @@
 @mixin default-transition {
     transition: all 0.5s ease;
 }
+
+@mixin default-text-shadow {
+    text-shadow: 0 0 0.1rem $darker-blue;
+}
+
+@mixin text-shadow-header {
+    text-shadow: 0.1rem 0 0.1rem $darker-blue;
+}
+
+@mixin text-shadow-light {
+    text-shadow: 0 0 0.1rem $text-color;
+}
