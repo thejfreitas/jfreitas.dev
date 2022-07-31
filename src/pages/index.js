@@ -25,7 +25,7 @@ export default function Index() {
     `,
   );
 
-  const { name, since, greetings } = pageData.site.siteMetadata;
+  const { name, since, greetings, title, aboutMeIntro } = pageData.site.siteMetadata;
 
   const [currentGreetingIndex, setGreetingIndex] = useState(0);
 
@@ -43,11 +43,7 @@ export default function Index() {
 
   return (
     <Layout>
-      <Seo
-        name={`${name.first} ${name.last}`}
-        title={pageData.site.siteMetadata.title}
-        aboutMeIntro={pageData.site.siteMetadata.aboutMeIntro}
-      />
+      <Seo name={`${name.first} ${name.last}`} title={title} aboutMeIntro={aboutMeIntro} />
 
       <div className="main-page">
         <div>
