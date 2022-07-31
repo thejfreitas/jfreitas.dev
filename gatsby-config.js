@@ -13,7 +13,7 @@ module.exports = {
       last: 'de Freitas Jr.',
     },
     title: 'Software Engineer',
-    aboutMeIntro: 'I am a Software Engineer with passion in build things with code.',
+    aboutMeIntro: 'I am a Software Engineer with a passion for building things with code.',
     since: 2013,
     socialMedia: [
       {
