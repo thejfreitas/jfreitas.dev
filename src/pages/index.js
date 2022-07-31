@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Layout from '../templates/layout-wrap';
 import Seo from '../components/seo';
+import SocialMediaNavigation from '../components/SocialMediaNavigation';
+import CurrentlyListening from '../components/CurrentlyListening';
 
 export default function Index() {
   const pageData = useStaticQuery(
@@ -17,18 +19,13 @@ export default function Index() {
             aboutMeIntro
             title
             since
-            socialMedia {
-              name
-              url
-              icon
-            }
           }
         }
       }
     `,
   );
 
-  const { name, since, socialMedia, greetings } = pageData.site.siteMetadata;
+  const { name, since, greetings } = pageData.site.siteMetadata;
 
   const [currentGreetingIndex, setGreetingIndex] = useState(0);
 
@@ -63,26 +60,14 @@ export default function Index() {
             {name.first} {name.last}
           </h1>
           <p>
-            I am a Software Engineer with expertise in build and maintaining systems, APIs and
+            I am a 👨‍💻 Software Engineer with expertise in building and maintaining systems, APIs and
             websites with more than {currentYear - since} years of progressive experience in the
             software development industry.
           </p>
 
-          <nav>
-            <ul>
-              {socialMedia.map((item, index) => {
-                const { name, icon, url } = item;
+          <CurrentlyListening title="100 Ways to Create Wealth" url="https://amzn.to/3zKlRnl" />
 
-                return (
-                  <li key={index}>
-                    <a href={url} aria-label={name} target="_blank" rel="noopener noreferrer">
-                      <img src={`${icon}.svg`} alt={name} />
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
+          <SocialMediaNavigation />
         </div>
       </div>
     </Layout>

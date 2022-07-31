@@ -21,7 +21,7 @@ const SocialMediaNavigation = () => {
   const { socialMedia } = socialMediaData.site.siteMetadata;
 
   return (
-    <nav>
+    <nav className="social-media-navigation">
       <ul>
         {socialMedia.map((item, index) => {
           const { name, icon, url } = item;
