@@ -4,6 +4,7 @@ import Layout from '../templates/layout-wrap';
 import Seo from '../components/seo';
 import SocialMediaNavigation from '../components/SocialMediaNavigation';
 import CurrentlyListening from '../components/CurrentlyListening';
+import PastBooks from '../components/PastBooks';
 
 export default function Index() {
   const pageData = useStaticQuery(
@@ -55,13 +56,15 @@ export default function Index() {
           <h1>
             {name.first} {name.last}
           </h1>
+
           <p>
             I am a 👨‍💻 Software Engineer with expertise in building and maintaining systems, APIs and
             websites with more than {currentYear - since} years of progressive experience in the
             software development industry.
           </p>
-
           <CurrentlyListening title="100 Ways to Create Wealth" url="https://amzn.to/3zKlRnl" />
+
+          <PastBooks />
 
           <SocialMediaNavigation />
         </div>

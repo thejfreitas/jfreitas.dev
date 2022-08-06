@@ -3,9 +3,13 @@ import PropTypes from 'prop-types';
 
 const CurrentlyListening = ({ title, url }) => {
   return (
-    <p>
-      📚 🎧 Currently listening to this audiobook - <a href={url}>{title}</a>
-    </p>
+    <section>
+      <article className="highlight-container">
+        <p className="currently-listening">
+          📚 🎧 Currently listening to this audiobook - <a href={url}>{title}</a>
+        </p>
+      </article>
+    </section>
   );
 };
 
