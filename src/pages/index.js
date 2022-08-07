@@ -59,8 +59,7 @@ export default function Index() {
 
           <p>
             I am a 👨‍💻 Software Engineer with expertise in building and maintaining systems, APIs and
-            websites with more than {currentYear - since} years of progressive experience in the
-            software development industry.
+            websites.
           </p>
           <CurrentlyListening title="100 Ways to Create Wealth" url="https://amzn.to/3zKlRnl" />
 
