@@ -12,6 +12,12 @@ const PastBooks = () => {
       title: 'The Courage to Be Disliked',
       url: 'https://amzn.to/3BE1dqk',
     },
+
+    {
+      month: 'May 2022',
+      title: 'Happy Go Money: Spend Smart, Save Right and Enjoy Life',
+      url: 'https://amzn.to/3vMxis1',
+    },
   ];
 
   return (
