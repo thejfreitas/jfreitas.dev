@@ -26,7 +26,7 @@ export default function Index() {
     `,
   );
 
-  const { name, since, greetings, title, aboutMeIntro } = pageData.site.siteMetadata;
+  const { name, greetings, title, aboutMeIntro } = pageData.site.siteMetadata;
 
   const [currentGreetingIndex, setGreetingIndex] = useState(0);
 
@@ -39,8 +39,6 @@ export default function Index() {
 
     return () => clearInterval(interval);
   }, [currentGreetingIndex, greetings.length]);
-
-  const currentYear = new Date().getFullYear();
 
   return (
     <Layout>
@@ -61,7 +59,10 @@ export default function Index() {
             I am a 👨‍💻 Software Engineer with expertise in building and maintaining systems, APIs and
             websites.
           </p>
-          <CurrentlyListening title="100 Ways to Create Wealth" url="https://amzn.to/3zKlRnl" />
+          <CurrentlyListening
+            title="Essentialism: The Disciplined Pursuit of Less"
+            url="https://amzn.to/3UuGU5w"
+          />
 
           <PastBooks />
 
