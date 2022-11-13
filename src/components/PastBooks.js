@@ -3,6 +3,10 @@ import React from 'react';
 const PastBooks = () => {
   const pastReadings = [
     {
+      title: 'Essentialism: The Disciplined Pursuit of Less',
+      url: 'https://amzn.to/3UuGU5w',
+    },
+    {
       title: '100 Ways to Create Wealth',
       url: 'https://amzn.to/3zKlRnl',
     },
@@ -32,7 +36,9 @@ const PastBooks = () => {
         {pastReadings.map((reading) => {
           return (
             <p>
-              <a href={reading.url}>{reading.title}</a>
+              <a href={reading.url} target="_blank" rel="noreferrer">
+                {reading.title}
+              </a>
             </p>
           );
         })}

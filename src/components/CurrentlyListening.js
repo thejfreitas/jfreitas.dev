@@ -6,7 +6,10 @@ const CurrentlyListening = ({ title, url }) => {
     <section>
       <article className="highlight-container">
         <p className="currently-listening">
-          📚 🎧 Currently listening to this audiobook - <a href={url}>{title}</a>
+          📚 🎧 Currently listening to this audiobook -{' '}
+          <a href={url} target="_blank" rel="noreferrer">
+            {title}
+          </a>
         </p>
       </article>
     </section>
