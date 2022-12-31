@@ -54,18 +54,16 @@ export default function Index() {
           <h1>
             {name.first} {name.last}
           </h1>
-
           <p>
             I am a 👨‍💻 Software Engineer with expertise in building and maintaining systems, APIs and
             websites.
           </p>
           <CurrentlyListening
-            title="The Daily Stoic: 366 Meditations on Wisdom, Perseverance, and the Art of Living"
-            url="https://amzn.to/3ttWsKK"
+            title="The Compound Effect: Multiply Your Success One Simple Step at a Time"
+            url="https://amzn.to/3GysgWc"
           />
 
           <PastBooks />
-
           <SocialMediaNavigation />
         </div>
       </div>

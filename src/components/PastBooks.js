@@ -3,6 +3,10 @@ import React from 'react';
 const PastBooks = () => {
   const pastReadings = [
     {
+      title: 'The Daily Stoic: 366 Meditations on Wisdom, Perseverance, and the Art of Living',
+      url: 'https://amzn.to/3ttWsKK',
+    },
+    {
       title: 'Essentialism: The Disciplined Pursuit of Less',
       url: 'https://amzn.to/3UuGU5w',
     },
