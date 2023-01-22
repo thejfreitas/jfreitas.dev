@@ -26,7 +26,7 @@
     "gatsby-plugin-react-helmet": "^6.3.0",
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sass": "^6.3.1",
-    "prettier": "^2.8.1",
+    "prettier": "^2.8.3",
     "sass": "^1.57.1"
   },
   "repository": {
