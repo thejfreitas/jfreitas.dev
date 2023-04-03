@@ -3,8 +3,6 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Layout from '../templates/layout-wrap';
 import Seo from '../components/seo';
 import SocialMediaNavigation from '../components/SocialMediaNavigation';
-import CurrentlyListening from '../components/CurrentlyListening';
-import PastBooks from '../components/PastBooks';
 
 export default function Index() {
   const pageData = useStaticQuery(
@@ -58,12 +56,6 @@ export default function Index() {
             I am a 👨‍💻 Software Engineer with expertise in building and maintaining systems, APIs and
             websites.
           </p>
-          <CurrentlyListening
-            title="The Compound Effect: Multiply Your Success One Simple Step at a Time"
-            url="https://amzn.to/3GysgWc"
-          />
-
-          <PastBooks />
           <SocialMediaNavigation />
         </div>
       </div>
