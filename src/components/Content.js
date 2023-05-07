@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Footer from '../components/Footer';
 
 const Content = ({ children }) => {
@@ -11,3 +12,7 @@ const Content = ({ children }) => {
 };
 
 export default Content;
+
+Content.propTypes = {
+  children: PropTypes.node.isRequired,
+};

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import Content from '../components/Content';
 
@@ -10,3 +11,7 @@ export default function Layout({ children }) {
     </main>
   );
 }
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
