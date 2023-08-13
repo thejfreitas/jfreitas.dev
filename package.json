@@ -29,7 +29,7 @@
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sass": "^6.11.0",
     "prettier": "^3.0.1",
-    "sass": "^1.64.2"
+    "sass": "^1.65.1"
   },
   "repository": {
     "type": "git",
