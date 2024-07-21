@@ -1,18 +1,12 @@
 # jfreitas.dev
 
-This is my personal website built in [GatsbyJs](https://www.gatsbyjs.org/) which is a open source framework based on [React](https://reactjs.org/)
-
-For web design I am using CSS Flexbox and [SASS](https://sass-lang.com/) as CSS preprocessor.
-
-Before you start you must have Gatsby CLI installed in your computer.
-
-You might need to [set up your environment](https://www.gatsbyjs.org/tutorial/part-zero/) first in order to install [the Gatsby CLI](https://www.gatsbyjs.org/tutorial/part-zero/#using-the-gatsby-cli)
+This is my personal website built in [NextJs](https://nextjs.org/docs) which is a open source framework based on [React](https://reactjs.org/)
 
 ## Requirements
 
 ### [NodeJs](https://nodejs.org/en/)
 
-`Expected version: >=18.12.1`
+`Expected version: >=20.15.1`
 
 ### [Yarn](https://yarnpkg.com/)
 
@@ -25,10 +19,8 @@ yarn
 and then
 
 ```
-gatsby develop
+yarn develop
 ```
-
-SCSS will compile automatically due the [gatsby-plugin-sass](https://www.gatsbyjs.org/packages/gatsby-plugin-sass/) as long as you are running `gatsby develop` command in your terminal.
 
 The `dev.sh` file will help you to create a production version of this website and deploy to production. In this case I am using [Netlify](https://www.netlify.com/) to deploy this website. You must create an account in order to set up your environment in production.
 
