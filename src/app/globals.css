@@ -1,26 +1,68 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-background: #0093e9;
+  --secondary-background: #80d0c7;
+}
+
+@theme {
+  --color-primary-background: var(--primary-background);
+  --color-secondary-background: var(--secondary-background);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --primary-background: #0093e9;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
-    rgb(var(--background-start-rgb));
+@layer base {
+  body {
+    @apply bg-linear-150 from-primary-background to-secondary-background text-white font-sans;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-balance font-bold;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  p {
+    @apply text-base text-balance;
+  }
 }
 
-@layer utilities {
+@layer components {
+  .body-general {
+    @apply min-h-full flex flex-col;
+  }
+
+  .main-container {
+    @apply flex flex-col flex-1 items-center justify-center px-8 py-8;
+    @apply md:py-32 md:px-16;
+  }
+
+  .content-wrapper {
+    @apply flex flex-col w-full;
+  }
+
+  .greetings {
+    @apply flex items-center gap-2 text-shadow-md;
+
+    .emoji {
+      @apply text-3xl;
+    }
+  }
 }

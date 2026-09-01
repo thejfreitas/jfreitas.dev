@@ -1,31 +1,31 @@
 # jfreitas.dev
 
-This is my personal website built in [NextJs](https://nextjs.org/docs) which is a open source framework based on [React](https://reactjs.org/)
-
 ## Requirements
 
 ### [NodeJs](https://nodejs.org/en/)
 
 `Expected version: >=20.15.1`
 
-### [Yarn](https://yarnpkg.com/)
+### [Bun](https://bun.sh/)
 
-After you clone this repository you must run the following command in order to install the dependency packages:
+## Getting Started
 
-```
-yarn
-```
+### Install dependencies
 
-and then
-
-```
-yarn develop
+```bash
+bun install
 ```
 
-The `dev.sh` file will help you to create a production version of this website and deploy to production. In this case I am using [Netlify](https://www.netlify.com/) to deploy this website. You must create an account in order to set up your environment in production.
+Run the development server:
 
-To build and deploy this website you can use the following command:
-
-```sh
-./dev.sh build deploy
+```bash
+bun dev
 ```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
