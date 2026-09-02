@@ -65,4 +65,8 @@
       @apply text-3xl;
     }
   }
+
+  .social-media-contacts {
+    @apply flex items-center gap-2;
+  }
 }
